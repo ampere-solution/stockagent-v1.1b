@@ -1,0 +1,74 @@
+{
+  "AAPL": {
+    "current_price": 264.35,
+    "previous_close": 263.88,
+    "day_change": 0.4700000000000273,
+    "market_cap": 3885396656128,
+    "volume": 33598417,
+    "pe_ratio": 33.504436,
+    "beta": 1.107,
+    "52w_high": 288.62,
+    "52w_low": 169.21,
+    "company_name": "Apple Inc."
+  },
+  "AMD": {
+    "current_price": 200.12,
+    "previous_close": 203.08,
+    "day_change": -2.960000000000008,
+    "market_cap": 326277824512,
+    "volume": 35051505,
+    "pe_ratio": 76.38168,
+    "beta": 1.949,
+    "52w_high": 267.08,
+    "52w_low": 76.48,
+    "company_name": "Advanced Micro Devices, Inc."
+  },
+  "GOOGL": {
+    "current_price": 303.33,
+    "previous_close": 302.02,
+    "day_change": 1.3100000000000023,
+    "market_cap": 3669382922240,
+    "volume": 28232579,
+    "pe_ratio": 28.060127,
+    "beta": 1.086,
+    "52w_high": 349.0,
+    "52w_low": 140.53,
+    "company_name": "Alphabet Inc."
+  },
+  "NVDA": {
+    "current_price": 187.98,
+    "previous_close": 184.97,
+    "day_change": 3.009999999999991,
+    "market_cap": 4576749027328,
+    "volume": 159887319,
+    "pe_ratio": 46.645157,
+    "beta": 2.314,
+    "52w_high": 212.19,
+    "52w_low": 86.62,
+    "company_name": "NVIDIA Corporation"
+  },
+  "ARM": {
+    "current_price": 127.24,
+    "previous_close": 126.89,
+    "day_change": 0.3499999999999943,
+    "market_cap": 135128694784,
+    "volume": 4255675,
+    "pe_ratio": 169.65334,
+    "beta": 4.374,
+    "52w_high": 183.16,
+    "52w_low": 80.0,
+    "company_name": "Arm Holdings plc"
+  },
+  "TSLA": {
+    "current_price": 411.32,
+    "previous_close": 410.63,
+    "day_change": 0.6899999999999977,
+    "market_cap": 1543450263552,
+    "volume": 45533478,
+    "pe_ratio": 384.4112,
+    "beta": 1.887,
+    "52w_high": 498.83,
+    "52w_low": 214.25,
+    "company_name": "Tesla, Inc."
+  }
+}

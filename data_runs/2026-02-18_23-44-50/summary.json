@@ -1,0 +1,25 @@
+{
+  "run_timestamp": "2026-02-18_23-44-50",
+  "tickers": [
+    "AAPL",
+    "AMD",
+    "GOOGL",
+    "NVDA",
+    "ARM",
+    "TSLA"
+  ],
+  "history_period": "1y",
+  "total_articles": 41,
+  "files": [
+    "prices.json",
+    "fundamentals.json",
+    "news.json",
+    "analyst_ratings.json",
+    "historical/AAPL.csv",
+    "historical/AMD.csv",
+    "historical/GOOGL.csv",
+    "historical/NVDA.csv",
+    "historical/ARM.csv",
+    "historical/TSLA.csv"
+  ]
+}

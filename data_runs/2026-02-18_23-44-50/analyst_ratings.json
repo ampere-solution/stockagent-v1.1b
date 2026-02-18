@@ -1,0 +1,44 @@
+{
+  "AAPL": {
+    "recommendation": "buy",
+    "target_mean": 292.70367,
+    "target_high": 350.0,
+    "target_low": 205.0,
+    "num_analysts": 41
+  },
+  "AMD": {
+    "recommendation": "buy",
+    "target_mean": 287.52173,
+    "target_high": 365.0,
+    "target_low": 210.0,
+    "num_analysts": 46
+  },
+  "GOOGL": {
+    "recommendation": "strong_buy",
+    "target_mean": 373.235,
+    "target_high": 443.0,
+    "target_low": 185.0,
+    "num_analysts": 56
+  },
+  "NVDA": {
+    "recommendation": "strong_buy",
+    "target_mean": 253.88464,
+    "target_high": 352.0,
+    "target_low": 140.0,
+    "num_analysts": 56
+  },
+  "ARM": {
+    "recommendation": "buy",
+    "target_mean": 147.834,
+    "target_high": 201.0,
+    "target_low": 80.0,
+    "num_analysts": 35
+  },
+  "TSLA": {
+    "recommendation": "hold",
+    "target_mean": 421.729,
+    "target_high": 600.0,
+    "target_low": 125.0,
+    "num_analysts": 40
+  }
+}

@@ -1,0 +1,22 @@
+#docker compose up --build
+# Open http://localhost:5005
+
+services:
+  stockagent:
+    cpuset: "40-79"
+    build: .
+    image: tinguyen2024/stockagent:v1.1b   # ← change to your Docker Hub username.  batch_thread=40 to use 40 cores.
+    container_name: stockagent
+    ports:
+      - "5005:5005"
+    volumes:
+      - ./models:/app/models:ro          # Mount local models directory
+      - ./data_runs:/app/data_runs        # Persist pipeline output
+    environment:
+      - MODELS_DIR=/app/models
+      - ANALYSIS_MODEL=llama-3.1-8b-instruct-Q8R16.gguf                  # empty = auto-detect first .gguf
+      - DECISION_MODEL=Llama-3.2-3B-Instruct-Q4_K_4.gguf                   # empty = same as analysis model
+      - CONTEXT_LENGTH=4096
+      - THREADS=32
+      - BATCH_THREADS=40
+    restart: unless-stopped

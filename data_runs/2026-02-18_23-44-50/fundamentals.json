@@ -1,0 +1,62 @@
+{
+  "AAPL": {
+    "revenue": 435617005568,
+    "net_income": 117776998400,
+    "profit_margin": 0.27037,
+    "operating_margin": 0.35374,
+    "debt_to_equity": 102.63,
+    "free_cash_flow": 106312753152,
+    "earnings_growth": 0.183,
+    "revenue_growth": 0.157
+  },
+  "AMD": {
+    "revenue": 34638999552,
+    "net_income": 4268999936,
+    "profit_margin": 0.12515001,
+    "operating_margin": 0.17059,
+    "debt_to_equity": 6.359,
+    "free_cash_flow": 4587250176,
+    "earnings_growth": 2.171,
+    "revenue_growth": 0.341
+  },
+  "GOOGL": {
+    "revenue": 402835996672,
+    "net_income": 132169998336,
+    "profit_margin": 0.32810003,
+    "operating_margin": 0.31568,
+    "debt_to_equity": 16.133,
+    "free_cash_flow": 38088376320,
+    "earnings_growth": 0.311,
+    "revenue_growth": 0.18
+  },
+  "NVDA": {
+    "revenue": 187141996544,
+    "net_income": 99198001152,
+    "profit_margin": 0.53007,
+    "operating_margin": 0.63168997,
+    "debt_to_equity": 9.102,
+    "free_cash_flow": 53282873344,
+    "earnings_growth": 0.667,
+    "revenue_growth": 0.625
+  },
+  "ARM": {
+    "revenue": 4671000064,
+    "net_income": 801000000,
+    "profit_margin": 0.17148,
+    "operating_margin": 0.15378,
+    "debt_to_equity": 5.912,
+    "free_cash_flow": 824750016,
+    "earnings_growth": -0.123,
+    "revenue_growth": 0.263
+  },
+  "TSLA": {
+    "revenue": 94827003904,
+    "net_income": 3793999872,
+    "profit_margin": 0.040009998,
+    "operating_margin": 0.047030002,
+    "debt_to_equity": 17.763,
+    "free_cash_flow": 3732624896,
+    "earnings_growth": -0.606,
+    "revenue_growth": -0.031
+  }
+}

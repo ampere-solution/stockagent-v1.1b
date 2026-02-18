@@ -1,0 +1,195 @@
+{
+  "report_metadata": {
+    "generated_at": "2026-02-18T23:43:55.255770",
+    "run_timestamp": "2026-02-18_23-43-05",
+    "tickers": [
+      "AAPL",
+      "AMD",
+      "GOOGL",
+      "NVDA",
+      "ARM",
+      "TSLA"
+    ],
+    "analysis_model": "llama-3.1-8b-instruct-Q8R16.gguf",
+    "decision_model": "Llama-3.2-3B-Instruct-Q4_K_4.gguf",
+    "data_dir": "./data_runs/2026-02-18_23-43-05"
+  },
+  "executive_summary": {
+    "total_stocks": 6,
+    "buy_count": 6,
+    "hold_count": 0,
+    "sell_count": 0,
+    "avg_sentiment": 0.6,
+    "avg_confidence": 83,
+    "market_assessment": "Neutral"
+  },
+  "stock_reports": [
+    {
+      "ticker": "AAPL",
+      "company": "Apple Inc.",
+      "price": 264.35,
+      "change": 0.47,
+      "change_pct": 0.18,
+      "pe_ratio": 33.5,
+      "market_cap": "3.89T",
+      "beta": 1.11,
+      "sentiment_score": 0.63,
+      "sentiment_label": "Bullish",
+      "recommendation": "BUY",
+      "confidence": 80,
+      "rationale": "AAPL's bullish sentiment and analyst consensus support a buy recommendation, despite the medium risk score. The stock's P/E ratio and beta suggest it may be undervalued compared to its historical averages.",
+      "key_factors": [
+        "Sentiment: 63% (Bullish)",
+        "Analyst Target: $292.70",
+        "Consensus: Buy"
+      ],
+      "risk_warning": "Medium risk score due to its relatively high P/E ratio and beta",
+      "risk_score": 5.0,
+      "risk_level": "Medium",
+      "allocation": 0.172
+    },
+    {
+      "ticker": "AMD",
+      "company": "Advanced Micro Devices",
+      "price": 200.12,
+      "change": -2.96,
+      "change_pct": -1.46,
+      "pe_ratio": 76.4,
+      "market_cap": "326.3B",
+      "beta": 1.95,
+      "sentiment_score": 0.35,
+      "sentiment_label": "Bearish",
+      "recommendation": "BUY",
+      "confidence": 80,
+      "rationale": "Although the sentiment is bearish, the RSI is oversold (28.34) and the MACD is not bullish, AMD's price has been increasing steadily. The analyst target and consensus are in favor of buying, and the risk score is moderate (7.0/10), making it a relatively attractive opportunity.",
+      "key_factors": [
+        "Low RSI",
+        "Analyst Target",
+        "Consensus Buy"
+      ],
+      "risk_warning": "Moderate risk due to high beta and volatility",
+      "risk_score": 5.0,
+      "risk_level": "Medium",
+      "allocation": 0.143
+    },
+    {
+      "ticker": "GOOGL",
+      "company": "Alphabet Inc.",
+      "price": 303.33,
+      "change": 1.31,
+      "change_pct": 0.43,
+      "pe_ratio": 28.1,
+      "market_cap": "3.67T",
+      "beta": 1.09,
+      "sentiment_score": 0.55,
+      "sentiment_label": "Neutral",
+      "recommendation": "BUY",
+      "confidence": 85,
+      "rationale": "The strong_buy consensus from analysts and the low risk score indicate a high level of investor confidence, while the low P/E ratio and low RSI suggest a relatively undervalued stock. Additionally, the bullish MACD signal indicates a potential upward trend.",
+      "key_factors": [
+        "Neutral sentiment",
+        "Low RSI",
+        "Strong analyst consensus"
+      ],
+      "risk_warning": "The low risk score may be due to the stock's high volatility, which could lead to sudden price swings.",
+      "risk_score": 5.0,
+      "risk_level": "Medium",
+      "allocation": 0.193
+    },
+    {
+      "ticker": "NVDA",
+      "company": "NVIDIA Corp.",
+      "price": 187.98,
+      "change": 3.01,
+      "change_pct": 1.63,
+      "pe_ratio": 46.6,
+      "market_cap": "4.58T",
+      "beta": 2.31,
+      "sentiment_score": 0.85,
+      "sentiment_label": "Very Bullish",
+      "recommendation": "STRONG BUY",
+      "confidence": 90,
+      "rationale": "NVDA's strong bullish sentiment and high analyst target suggest a high growth potential, while the low RSI and bullish MACD indicate a favorable technical position. The company's risk score is relatively low, indicating a manageable risk profile.",
+      "key_factors": [
+        "Very Bullish sentiment",
+        "Low RSI and bullish MACD",
+        "Strong analyst target"
+      ],
+      "risk_warning": "High volatility due to beta of 2.31",
+      "risk_score": 5.0,
+      "risk_level": "Medium",
+      "allocation": 0.174
+    },
+    {
+      "ticker": "ARM",
+      "company": "Arm Holdings plc",
+      "price": 127.24,
+      "change": 0.35,
+      "change_pct": 0.28,
+      "pe_ratio": 169.7,
+      "market_cap": "135.1B",
+      "beta": 4.37,
+      "sentiment_score": 0.65,
+      "sentiment_label": "Bullish",
+      "recommendation": "BUY",
+      "confidence": 80,
+      "rationale": "The bullish sentiment and high P/E ratio indicate a strong growth potential, while the MACD is bullish, suggesting a potential uptrend. However, the high RSI and risk score require caution and a conservative approach.",
+      "key_factors": [
+        "Bullish sentiment",
+        "High P/E ratio",
+        "Bullish MACD"
+      ],
+      "risk_warning": "Overvaluation and high RSI pose a risk of correction if not managed properly",
+      "risk_score": 5.0,
+      "risk_level": "Medium",
+      "allocation": 0.158
+    },
+    {
+      "ticker": "TSLA",
+      "company": "Tesla Corp.",
+      "price": 411.32,
+      "change": 0.69,
+      "change_pct": 0.17,
+      "pe_ratio": 384.4,
+      "market_cap": "1.54T",
+      "beta": 1.89,
+      "sentiment_score": 0.55,
+      "sentiment_label": "Neutral",
+      "recommendation": "BUY",
+      "confidence": 85,
+      "rationale": "The sentiment is neutral, but the MACD is bullish, indicating a potential trend upwards. Additionally, the RSI is below 70, suggesting the stock is not overbought.",
+      "key_factors": [
+        "Sentiment is neutral but MACD is bullish",
+        "RSI is below 70",
+        "Analyst target is higher than current price"
+      ],
+      "risk_warning": "High P/E ratio may indicate overvaluation",
+      "risk_score": 5.0,
+      "risk_level": "Medium",
+      "allocation": 0.16
+    }
+  ],
+  "portfolio_overview": {
+    "allocations": {
+      "AAPL": 0.172,
+      "AMD": 0.143,
+      "GOOGL": 0.193,
+      "NVDA": 0.174,
+      "ARM": 0.158,
+      "TSLA": 0.16
+    },
+    "top_pick": {
+      "ticker": "NVDA",
+      "recommendation": "STRONG BUY",
+      "confidence": 90
+    },
+    "highest_risk": {
+      "ticker": "AAPL",
+      "risk_score": 5.0
+    },
+    "highest_sentiment": {
+      "ticker": "NVDA",
+      "sentiment_score": 0.85
+    }
+  }
+}
