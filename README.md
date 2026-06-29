@@ -2,6 +2,19 @@
 ## User Interface - Web Dashboard
 StockAgent is a four-agent pipeline that performs stock analysis using local GGUF language models running on CPU via `llama-cpp-python`. The system combines rule-based data collection, LLM powered natural language analysis, ML-based anomaly detection, and deterministic report generation.  
 The web dashboard has two pages, both served at http://<your_ip_address>:5005.
+### Dashboard
+- Ticker input prefilled with AAPL, AMD, GOOGL, NVDA, ARM, TSLA and a Run button that POSTs to /api/run.
+- Pipeline strip:  four nodes wired with arrows showing each agent and its current state (IDLE → running → done)
+- Data Collection (rule-based)
+- Data Analysis (local LLM + ML)
+- Decision Engine (local LLM reasoning)
+- Records Officer (rule-based)
+- Live terminal: streams log lines from /api/stream (SSE) as the pipeline runs.
+- Stat cards: portfolio allocation donut chart, per-ticker sentiment, and pipeline summary card.
+- Analysis results: a grid of stock cards showing each ticker’s recommendation, confident gauge, and metrics.
+
+### Report Viewer
+
 
 
 
