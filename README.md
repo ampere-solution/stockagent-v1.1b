@@ -31,6 +31,16 @@ Below is the architectural diagram which visualize the Stock Agent system from d
 - Report
 <img width="2091" height="1094" alt="image-20260504-172917.png" src="image-20260504-172917.png" />
 
+## What This Demo Shows
+This is a multi-agent AI system that analyzes stocks and produces investment recommendations. It demonstrates an agentic AI architecture where four specialized agents work sequentially, each using the optimal approach for its task:
+<img width="2091" height="1094" alt="image-20260504-174733.png" src="image-20260504-174733.png" />
+- Agent 1 gathers real-time financial data from Yahoo Finance (no AI involved)
+- Agent 2 analyzes that data using a combination of Ampere Optimized Inference model:  llama-3.1-8b-instruct-Q8R16.gguf, and machine learning models,
+- Agent 3 synthesizes everything into per-stock recommendations with confidence scores and portfolio allocations using Ampere Optimized Inference model: Llama-3.2-3B-Instruct-Q4_K_4.gguf
+- Agent 4 looks at output json files and put together a presentation summary report.
+The default ticker set is *AAPL, AMD, GOOGL, NVDA, ARM, TSLA* (but can be configured to any stock symbols).
+All AI inferences run *locally on CPU* using Ampere Optimized Inference AI models in GGUF-format models via llama-cpp-python. No cloud APIs, no GPU required, no per-request costs.
+
 
 
 
