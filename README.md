@@ -182,7 +182,35 @@ environment:
   - DECISION_MODEL=Llama-3.2-3B-Instruct-Q4_K_M.gguf      # Smaller for decisions
 ```
 
+## Demo Talking Points
+While the pipeline runs, highlight these points:
+- Four autonomous agents working in sequence — data collection, analysis, decision-making, reporting
+- Local LLM inference — no cloud API calls, fully private, runs on CPU
+- Real-time streaming — SSE pushes agent progress to the browser instantly
+- Per-ticker isolation  — each stock analyzed independently for reliable JSON output
+- Dual-model support — can run a large model for analysis and a small fast model for decisions
 
+## Stop the Demo
+- Graceful stop
+```bash
+# stop_app.sh
+$ docker compose stop
+```
+- Remove the demo
+```bash
+$ docker compose down
+```
+## Troubleshooting
+```bash
+$ docker logs stockagent
+```
+**Common causes:**
+
+**No model found**: Ensure `.gguf` files are in `./models/` and volume mount is correct
+
+**Wrong architecture**: Base image is ARM64 — won't run on x86_64 without emulation
+
+**OOM**: Model too large for available RAM
 
 
 
