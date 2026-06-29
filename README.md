@@ -14,6 +14,7 @@ The web dashboard has two pages, both served at http://<your_ip_address>:5005.
 - Analysis results: a grid of stock cards showing each ticker’s recommendation, confident gauge, and metrics.
 
 ### Report Viewer
+- Loaded after a run completes.  Show 3 sections fed by /api/report: Executive Summary, Stock Analysis, and Porttfolio Overview, plus a download button for the raw report.json.
 
 
 
