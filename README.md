@@ -57,6 +57,36 @@ The default ticker set is **AAPL, AMD, GOOGL, NVDA, ARM, TSLA** (but can be conf
 - CPU only (No need GPU)
 - A practical AI platform.
 
+## Proof Points - How does It Show This?
+### Agent 1 - Data Collection Agent
+- The agent 1 which is **Data Collection agent**  runs 6 sequential steps using the yfinance API:
+
+Step
+Method
+What it fetches
+1a
+fetch_realtime_prices()
+Current price, previous close, change, market cap, volume, P/E, beta, 52-week high/low
+1b
+fetch_historical_data()
+1 year of daily OHLCV (Open/High/Low/Close/Volume) data as pandas DataFrames
+1c
+fetch_fundamentals()
+Revenue, net income, profit margin, operating margin, debt-to-equity, free cash flow, earnings/revenue growth
+1d
+fetch_news()
+Recent headlines filtered by trusted sources (reuters, cnbc, bloomberg)
+1e
+fetch_analyst_ratings()
+Consensus recommendation, mean/high/low price targets, number of analysts
+1f
+save_data()
+Saves everything to data_runs/{timestamp}/
+
+
+
+
+
 
     
 <img width="2091" height="1094" alt="Screenshot 2026-02-09 at 9 24 45 AM" src="https://github.com/user-attachments/assets/0cf8199b-6c0d-422e-9a88-861814b166ad" />
