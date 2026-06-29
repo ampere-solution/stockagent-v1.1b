@@ -1,4 +1,13 @@
 # Stock Agent - Agentic AI
+## User Interface - Web Dashboard
+StockAgent is a four-agent pipeline that performs stock analysis using local GGUF language models running on CPU via `llama-cpp-python`. The system combines rule-based data collection, LLM powered natural language analysis, ML-based anomaly detection, and deterministic report generation.  
+The web dashboard has two pages, both served at http://<your_ip_address>:5005.
+
+
+
+
+
+
 - Download the two Ampere optimized models from Huggingface:  llama-3.1-8b-instruct-Q8R16.gguf and Llama-3.2-3B-Instruct-Q4_K_4.gguf
 - Place the two models inside the models directory (need to create a models directory).
 - Run 'start_app.sh'.  The script will pull the demo docker image from docker hub, setup the environments neccessary for this demo.
