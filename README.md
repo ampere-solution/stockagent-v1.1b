@@ -60,7 +60,7 @@ The default ticker set is **AAPL, AMD, GOOGL, NVDA, ARM, TSLA** (but can be conf
 ## Proof Points - How does It Show This?
 ### Agent 1 - Data Collection Agent
 - The agent 1 which is **Data Collection agent**  runs 6 sequential steps using the yfinance API:
-
+| Step | Method | What it fletch | 
 
 
 
