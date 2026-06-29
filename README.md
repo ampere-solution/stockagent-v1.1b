@@ -60,9 +60,30 @@ The default ticker set is **AAPL, AMD, GOOGL, NVDA, ARM, TSLA** (but can be conf
 ## Proof Points - How does It Show This?
 ### Agent 1 - Data Collection Agent
 - The agent 1 which is **Data Collection agent**  runs 6 sequential steps using the yfinance API:
+#### What it fetches
+- Current price, previous close, change, market cap, volume, P/E, beta, 52-week high/low
+- 1 year of daily OHLCV (Open/High/Low/Close/Volume) data as pandas DataFrames
+- Revenue, net income, profit margin, operating margin, debt-to-equity, free cash flow, earnings/revenue growth
+- Recent headlines filtered by trusted sources (reuters, cnbc, bloomberg)
+- Consensus recommendation, mean/high/low price targets, number of analysts
+- Saves everything to data_runs/{timestamp}/
 
-
-
+### Agent 2 - Data Analysis Agent
+- The agent 2 (**Data Analysis agent**) receives collected_data from Agent 1 and produces enriched analysis.
+#### Sentiment Analysis
+Method: analyze_sentiment(news_data)
+For each ticker, the agent:
+- Concatenates all news headlines into a single prompt
+- Sends one LLM call asking for a JSON response with sentiment_score (0.0-1.0), sentiment_label, and key_drivers
+- Clamps the score to [0.0, 1.0]
+- Falls back to {score: 0.5, label: "Neutral"} if the LLM fails
+  
+The prompt instructs the model to produce a specific JSON schema and explains the scoring scale:
+- 0.0 = Very Bearish
+- 0.3 = Bearish
+- 0.5 = Neutral
+- 0.7 = Bullish
+- 1.0 = Very Bullish
 
 
 
