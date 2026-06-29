@@ -110,7 +110,8 @@ For each ticker, the agent:
 Fallback: If the LLM fails, _rule_based_rank() sorts tickers by P/E (value), revenue growth (growth), and beta (risk), then averages the ranks.
 
 #### Risk Scoring
-Method: compute_risk_scores(prices, fundamentals, historical)
+Method: compute_risk_scores(prices, fundamentals, historical).
+
 Computes a composite risk score (1-10) from four normalized metrics.
 
 ### Agent 3 - Decision Making Agent
@@ -123,6 +124,65 @@ For **each ticker individually**, the agent 3:
 
 ### Agent 4 - Records Officer Agent
 Compiling report and saved to report.json file
+
+## Running the Demo
+Step-by-step guide to run the Stock Analysis Pipeline demo in Docker.
+### Recommended Resources
+Recommendation:
+- 32 GB (allows 8B models) RAM
+- Multi-core:40 (32 threads ideal for inference)
+- Llama-3.2-3B-Instruct-Q4_K_4.gguf for speed.
+- llama-3.1-8b-instruct-Q8R16.gguf for quality
+### Software Stack
+- llama-cpp-python | =0.2.80 | GGUF model inference (CPU)
+- yfinance | =0.2.31 | Yahoo Finance stock data API
+- pandas | =2.0.0 | DataFrames and data manipulation
+- numpy | =1.24.0 | Numerical computing
+- scikit-learn | =1.3.0 | Machine learning (Isolation Forest, StandardScaler)
+- flask | =3.0.0 | Web server and API
+- beautifulsoup4 | =4.12.0 | HTML parsing
+- requests | =2.31.0 | HTTP client
+
+## Demo Deployment
+- Git clone from the repo:  GitHub - ampere-solution/stockagent-v1.1b
+- docker-compose.yaml:
+```yaml
+services:
+  stockagent:
+    cpuset: "0-39"
+    build: .
+    image: tinguyen2024/stockagent:v1.1b   # ← change to your Docker Hub username.  batch_thread=40 to use 40 cores.
+    container_name: stockagent
+    ports:
+      - "5005:5005"
+    volumes:
+      - ./models:/app/models:ro          # Mount local models directory
+      - ./data_runs:/app/data_runs        # Persist pipeline output
+    environment:
+      - MODELS_DIR=/app/models
+      - ANALYSIS_MODEL=llama-3.1-8b-instruct-Q8R16.gguf                    # empty = auto-detect first .gguf
+      - DECISION_MODEL=Llama-3.2-3B-Instruct-Q4_K_4.gguf                   # empty = same as analysis model
+      - CONTEXT_LENGTH=4096
+      - THREADS=32
+      - BATCH_THREADS=40
+    restart: unless-stopped
+```
+- Download the two Ampere optimized models from Huggingface: llama-3.1-8b-instruct-Q8R16.gguf and Llama-3.2-3B-Instruct-Q4_K_4.gguf
+- Place the two models inside the models directory (need to create a models directory).
+- Run 'start_app.sh'. The script will pull the demo docker image from docker hub, setup the environments neccessary for this demo.
+- Open the demo at http://< your_ip_address >:5005
+- Click **"Run Analysis"** button
+- Watch real-time progress in the log panel (SSE streaming)
+- When complete, results appear in the dashboard
+- Click **"View Report"** to see the full structured report
+- Using two different models, example:
+```
+environment:
+  - ANALYSIS_MODEL=Qwen2.5-7B-Instruct-Q8_0.gguf          # Bigger for analysis
+  - DECISION_MODEL=Llama-3.2-3B-Instruct-Q4_K_M.gguf      # Smaller for decisions
+```
+
+
 
 
 
