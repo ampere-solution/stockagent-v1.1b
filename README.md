@@ -1,4 +1,4 @@
-# stockagent-v1.1b - How-To
+# Stock Agent - Agentic AI
 - Download the two Ampere optimized models from Huggingface:  llama-3.1-8b-instruct-Q8R16.gguf and Llama-3.2-3B-Instruct-Q4_K_4.gguf
 - Place the two models inside the models directory (need to create a models directory).
 - Run 'start_app.sh'.  The script will pull the demo docker image from docker hub, setup the environments neccessary for this demo.
