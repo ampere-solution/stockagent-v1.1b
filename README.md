@@ -91,3 +91,38 @@ Computes from historical OHLCV data using pandas:
 - **RSI** (Relative Strength Index) -- 14-day rolling gain/loss ratio -- Overbought (>70) or oversold (<30)
 - **MACD** (Moving Average Convergence Divergence) -- EMA(12) - EMA(26) vs Signal EMA(9) -- Momentum direction and crossovers
 - **Bollinger Band Position** -- Where price sits relative to 20-day SMA +/- 2 std dev -- Relative position in volatility band (0 = lower band, 1 = upper band)
+
+#### Anomaly Detection
+Method: detect_anomalies(historical)
+Uses scikit-learn's **Isolation Forest** (unsupervised anomaly detection):
+- Builds features per day: volume z-score, daily price change, 5-day rolling volatility
+- Fits an Isolation Forest with contamination=0.05 (5% expected anomalies)
+- Counts anomalies in the last 30 days
+- Flags a "breakout signal" if 3+ recent anomalies detected
+Requires at least 30 days of history per ticker.
+
+#### Peer Comparison
+Method: peer_comparison(prices, fundamentals)
+For each ticker, the agent:
+- Builds a summary table of all tickers (price, P/E, beta, profit margin, revenue growth)
+- Asks the LLM to rank this specific ticker vs its peers on value, growth, risk, and overall
+- The LLM returns ranks from 1 (best) to N (worst) plus a key_edge description
+Fallback: If the LLM fails, _rule_based_rank() sorts tickers by P/E (value), revenue growth (growth), and beta (risk), then averages the ranks.
+
+#### Risk Scoring
+Method: compute_risk_scores(prices, fundamentals, historical)
+Computes a composite risk score (1-10) from four normalized metrics.
+
+### Agent 3 - Decision Making Agent
+For **each ticker individually**, the agent 3:
+- Assembles a data summary: price, P/E, beta, sentiment, RSI, MACD, Bollinger position, risk score, analyst target/consensus
+- Sends one LLM call with a chain-of-thought prompt ("Think step by step: 1. Is the sentiment positive? 2. Is RSI overbought?...")
+- Requests JSON with: recommendation, confidence, rationale, key_factors, risk_warning
+- Validates the recommendation is one of: STRONG BUY, BUY, HOLD, SELL (defaults to HOLD if invalid)
+- Clamps confidence to [0, 100]
+
+### Agent 4 - Records Officer Agent
+Compiling report and saved to report.json file
+
+
+
