@@ -41,12 +41,22 @@ This is a multi-agent AI system that analyzes stocks and produces investment rec
 The default ticker set is **AAPL, AMD, GOOGL, NVDA, ARM, TSLA** (but can be configured to any stock symbols).
 - All AI inferences run **locally on CPU** using Ampere Optimized Inference AI models in GGUF-format models via llama-cpp-python. No cloud APIs, no GPU required, no per-request costs.
 
+## Target Audience
+- Financial and Investment teams or companies:
+    - Retails traders.
+    - Portfolio managers.
+    - Financial analysts.
+    - Investment firms.
+    -Financial institutes.
+
+## Key Message - What are we trying to convince of?
+- Most people still think AI = single LLM inference.  Agentic AI is a real production workload and pipeline which shows:
+    - Multiple cooperative agents
+    - Decision synthesis
+- On premise or Cloud-native deployment with Agentic AI.  Agentic AI can deploy today - economically - in OCI A4.
+- CPU only (No need GPU)
+- A practical AI platform.
 
 
-
-- Download the two Ampere optimized models from Huggingface:  llama-3.1-8b-instruct-Q8R16.gguf and Llama-3.2-3B-Instruct-Q4_K_4.gguf
-- Place the two models inside the models directory (need to create a models directory).
-- Run 'start_app.sh'.  The script will pull the demo docker image from docker hub, setup the environments neccessary for this demo.
-- Open the demo at http://< your_ip_address >:5005
     
 <img width="2091" height="1094" alt="Screenshot 2026-02-09 at 9 24 45 AM" src="https://github.com/user-attachments/assets/0cf8199b-6c0d-422e-9a88-861814b166ad" />
