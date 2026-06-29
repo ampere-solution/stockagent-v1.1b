@@ -60,10 +60,7 @@ The default ticker set is **AAPL, AMD, GOOGL, NVDA, ARM, TSLA** (but can be conf
 ## Proof Points - How does It Show This?
 ### Agent 1 - Data Collection Agent
 - The agent 1 which is **Data Collection agent**  runs 6 sequential steps using the yfinance API:
-| Step | Method | What it fetches |
-| :----- | :------- | :---------------- |
-| 1a   | fetch_realtime_prices() | Current price, previous close, change, market cap, volume, P/E, beta, 52-week high/low |
-| 1b   | fetch_historical_data() | 1 year of daily OHLCV (Open/High/Low/Close/Volume) data as pandas DataFrames |
+
 
 
 
