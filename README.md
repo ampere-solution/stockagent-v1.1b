@@ -85,8 +85,9 @@ The prompt instructs the model to produce a specific JSON schema and explains th
 - 0.7 = Bullish
 - 1.0 = Very Bullish
 
-
-
-
-    
-<img width="2091" height="1094" alt="Screenshot 2026-02-09 at 9 24 45 AM" src="https://github.com/user-attachments/assets/0cf8199b-6c0d-422e-9a88-861814b166ad" />
+#### Technical Indicators
+Method: compute_technicals(historical)
+Computes from historical OHLCV data using pandas:
+- **RSI** (Relative Strength Index) -- 14-day rolling gain/loss ratio -- Overbought (>70) or oversold (<30)
+- **MACD** (Moving Average Convergence Divergence) -- EMA(12) - EMA(26) vs Signal EMA(9) -- Momentum direction and crossovers
+- **Bollinger Band Position** -- Where price sits relative to 20-day SMA +/- 2 std dev -- Relative position in volatility band (0 = lower band, 1 = upper band)
