@@ -5,10 +5,10 @@ The web dashboard has two pages, both served at http://<your_ip_address>:5005.
 ### Dashboard
 - Ticker input prefilled with AAPL, AMD, GOOGL, NVDA, ARM, TSLA and a Run button that POSTs to /api/run.
 - Pipeline strip:  four nodes wired with arrows showing each agent and its current state (IDLE → running → done)
-- Data Collection (rule-based)
-- Data Analysis (local LLM + ML)
-- Decision Engine (local LLM reasoning)
-- Records Officer (rule-based)
+    - Data Collection (rule-based)
+    - Data Analysis (local LLM + ML)
+    - Decision Engine (local LLM reasoning)
+    - Records Officer (rule-based)
 - Live terminal: streams log lines from /api/stream (SSE) as the pipeline runs.
 - Stat cards: portfolio allocation donut chart, per-ticker sentiment, and pipeline summary card.
 - Analysis results: a grid of stock cards showing each ticker’s recommendation, confident gauge, and metrics.
